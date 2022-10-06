@@ -23,6 +23,7 @@ docker exec -it mongo1 mongo
 ```
 
 Tạo một bản cài đặt
+
 ```
 > config = {
         "_id":"my-mongo-set",
