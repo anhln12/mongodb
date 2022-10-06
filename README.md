@@ -32,3 +32,8 @@ db.test.find({"_id" : ObjectId("4ecc05e55dd98a436ddcc47c")}) // explicit
 
 db.test.find(ObjectId("4ecc05e55dd98a436ddcc47c"))           // shortcut
 { "_id" : ObjectId("4ecc05e55dd98a436ddcc47c"), "x" : 1 }
+
+
+Updating all documents:
+syntax: db.collection.updateMany({}, {update})
+db.Data.updateMany({}, {$set: { "isCheck": null }});
