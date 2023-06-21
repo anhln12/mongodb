@@ -11,3 +11,6 @@ find /opt/backup-mongo-dbhome/ -name '*.gz' -mtime +3 -exec rm -f {} \;
 
 # Restore
 mongorestore --host localhost --port 27017 -u xxx_dev -p xxxx -d home_multibank --gzip --archive=/home/anhle4/home_multibank_20230616.gz --authenticationDatabase=admin
+
+
+https://topdev.vn/blog/huong-dan-sao-luu-khoi-phuc-data-mongo-mongodump-mongorestore/
