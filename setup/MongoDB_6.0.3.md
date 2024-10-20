@@ -56,3 +56,52 @@ sudo systemctl restart mongod
 ```
 
 That’s it! You now have MongoDB 6.0.3 installed on CentOS 8.
+
+
+To create an administrative user for MongoDB with admin privileges, follow these steps:
+
+1. Start the MongoDB Shell
+```
+mongosh
+```
+2. Switch to the admin Database
+```
+use admin
+```
+
+3. Create the Admin User
+```
+db.createUser({
+  user: "admin",
+  pwd: "admin",
+  roles: [{ role: "root", db: "admin" }]
+})
+```
+
+This command creates a user named admin with the role root, which has full access to all databases and administrative functions.
+
+4. Enable Authentication in MongoDB Configuration
+By default, MongoDB does not require authentication. To enable authentication, you need to modify the MongoDB configuration file.
+
+Open the MongoDB configuration file (/etc/mongod.conf) with a text editor like nano or vi:
+```
+nano /etc/mongod.conf
+security:
+  authorization: "enabled"
+```
+
+Restart MongoDB Service
+```
+systemctl restart mongod
+```
+
+Test the Admin User
+```
+mongo -u admin -p --authenticationDatabase admin
+```
+
+Verify Admin Access
+```
+db.runCommand({ connectionStatus: 1 })
+```
+
