@@ -1,0 +1,13 @@
+- Hai node đã cài cùng phiên bản MongoDB 8.0
+- Hostname và DNS phân giải được hai chiều
+- TCP 27017 chỉ cho phép nguồn tin cậy
+- KeyFile giống nhau trên hai node, chmod 400
+- Đã tạo tài khoản mongoAdmin
+- Đã tạo tài khoản ứng dụng riêng
+- Đã tạo tài khoản backup riêng
+- Đã kiểm tra replication thành công
+- Đã thử backup và restore
+- Đã kiểm tra quy trình failover/failback trên staging
+- Đã cấu hình giám sát disk, RAM, CPU, replication lag
+- Đã cấu hình NTP/chrony đồng bộ thời gian
+- Đã cấu hình TLS cho kết nối client và nội bộ nếu yêu cầu bảo mật production
