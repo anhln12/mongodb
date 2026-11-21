@@ -193,6 +193,16 @@ use appdb
 db.replication_test.find()
 ```
 
+test đồng bộ
+Node 1:
+```
+mongosh -u admin-user -p --authenticationDatabase admin
+use testdb
+db.employees.insert({Name: "Andrew", Age: 25, City: "London", Status: "Married"})
+db.employees.find()
+```
+
+
 
 6. Lưu ý vận hành thực tế cho mô hình 2 node
 
